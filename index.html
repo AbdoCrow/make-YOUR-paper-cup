@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make YOUR Paper Cup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Make YOUR Paper Cup</h1>
+    <p>Customize your cup with colors, stickers, or text!</p>
+  </header>
+
+  <main>
+    <div class="customizer">
+      <!-- Cup Preview -->
+      <div class="preview-container">
+        <h2>Preview Your Cup</h2>
+        <div class="cup-preview" id="cupPreview">
+          <img src="white.png" alt="White Cup" id="cupImage">
+          <div id="customText"></div>
+          <img id="stickerImage" src="" alt="Sticker" style="display: none;">
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <!-- Color Selection -->
+        <h3>Choose a Cup Color</h3>
+        <div class="colors">
+          <label><input type="radio" name="cupColor" data-image="red.png"><span style="background-color: red;"></span></label>
+          <label><input type="radio" name="cupColor" data-image="white.png" checked><span style="background-color: white; border: 1px solid #ccc;"></span></label>
+          <label><input type="radio" name="cupColor" data-image="yellow.png"><span style="background-color: yellow;"></span></label>
+          <label><input type="radio" name="cupColor" data-image="blue.png"><span style="background-color: #00BFFF;"></span></label>
+          <label><input type="radio" name="cupColor" data-image="brown.png"><span style="background-color: brown;"></span></label>
+          <label><input type="radio" name="cupColor" data-image="green.png"><span style="background-color: green;"></span></label>
+          <label><input type="radio" name="cupColor" data-image="pink.png"><span style="background-color: pink;"></span></label>
+        </div>
+
+        <!-- Custom Text -->
+        <h3>Add Custom Text</h3>
+        <input type="text" id="textInput" placeholder="Enter your text here">
+        <label>Text Color: <input type="color" id="textColor" value="#000000"></label>
+        <label>Text Size: <input type="range" id="textSize" min="10" max="50" value="20"></label>
+
+        <!-- Stickers -->
+        <h3>Add a Sticker</h3>
+        <div class="stickers">
+          <img src="sticker1.png" class="sticker-option" data-sticker="sticker1.png" alt="Sticker 1">
+          <img src="sticker2.png" class="sticker-option" data-sticker="sticker2.png" alt="Sticker 2">
+          <img src="sticker3.png" class="sticker-option" data-sticker="sticker3.png" alt="Sticker 3">
+        </div>
+        <button id="clearSticker">Remove Sticker</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Make YOUR Paper Cup</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
